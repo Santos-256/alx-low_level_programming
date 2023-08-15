@@ -3,12 +3,13 @@
 /**
  * main - Entry point
  *
- * Description: Aprogram that prints Programming is like building a multilingual puzzle
+ * Description: This  prints "Programming is like building a multilingual puzzle"
  * Return: Always 0 (success)
  */
 
 int main(void)
+
 {
-	puts("\"Programming is like building a multilingual puzzle,\n");
+	puts("\"Programming is like building a multilingual puzzle,");
 	return (0);
 }
