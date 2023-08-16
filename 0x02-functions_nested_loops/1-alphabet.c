@@ -3,6 +3,7 @@
  * main - This program prints 'a' to 'z'.
  * Return: return 0;
  */
+int main(void)
 void print_alphabet(void)
 
 {
@@ -15,9 +16,10 @@ void print_alphabet(void)
 
 	{
 	_putchar(ch);
+	return (0);
 	
 	}
 	_putchar('\n');
-	return (0);
+
 
 }
