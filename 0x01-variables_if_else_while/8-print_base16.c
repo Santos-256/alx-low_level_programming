@@ -8,13 +8,13 @@
 int main(void)
 {
 	int i = 48;
+	int ch = 'a';
 
 	while (i < 58)
 	{
 		putchar(i);
 		i++;
 	}
-	int ch = 'a';
 
 	while (ch <= 'e')
 	{
