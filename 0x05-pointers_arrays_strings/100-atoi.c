@@ -29,8 +29,8 @@ int _atoi(char *s)
 			f = 1;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
+			f = 0;
 		}
-		f = 0;
 		i++;
 	}
 	if (f == 0)
