@@ -2,7 +2,7 @@
 /**
  * print_number - prints an integer.
  * @n: input
- * Return: *s
+ * Return: s
  */
 void print_number(int n)
 {
@@ -13,7 +13,7 @@ void print_number(int n)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j < s2; j++)
+		for (j = 0; j < 52; j++)
 		{
 			if (s[i] == data[j])
 			{
