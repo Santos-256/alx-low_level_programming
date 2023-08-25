@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_number - prints an integer.
- * @n: input
- * Return: s
+ * print_number - encodes a string using rot13.
+ * @s: input
+ * Return: *s
  */
-void print_number(int n)
+char *rot13(char *s)
 {
 	int i;
 	int j;
@@ -15,7 +15,7 @@ void print_number(int n)
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if (s[i] == data[j])
+			if (s[i] == data1[j])
 			{
 				s[i] = datarot[j];
 				break;
