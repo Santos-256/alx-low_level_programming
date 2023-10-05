@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * argstostr - comcatenates arguments
- * @ac: int input
+ * argstostr - Entry point
+ * @ac: input
  * @av: double pointer array
  * Return: 0
  */
