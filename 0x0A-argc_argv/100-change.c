@@ -7,7 +7,7 @@
  * to make change for an amount of money.
  * @argc: number of arguments
  * @argv: array of arguments
- * Return: 0 if success, 1 if not
+ * Return: 0 if success, 1 if Error
  */
 
 int main(int argc, char *argv[])
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("Count not success\n");
+		printf("Error\n");
 		return (1);
 	}
 
