@@ -59,7 +59,7 @@ void error(void)
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
-	int longi1, longi2, longi, j, take, num1, num2, *result, p = 0;
+	int longi1, longi2, longi, j, take, integer1, integer2, *result, p = 0;
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
@@ -74,12 +74,12 @@ int main(int argc, char *argv[])
 		result[j] = 0;
 	for (longi1 = longi1 - 1; longi1 >= 0; longi1--)
 	{
-		num1 = s1[longi1] - '0';
+		integer1 = s1[longi1] - '0';
 		take = 0;
 		for (longi2 = _strlen(s2) - 1; longi2 >= 0; longi2--)
 		{
-			num2 = s2[longi2] - '0';
-			take += result[longi1 + longi2 + 1] + (num1 * num2);
+			integer2 = s2[longi2] - '0';
+			take += result[longi1 + longi2 + 1] + (integer1 * integer2);
 			result[longi1 + longi2 + 1] = take % 10;
 			take /= 10;
 		}
