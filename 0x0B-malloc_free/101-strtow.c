@@ -1,73 +1,70 @@
-#include "main.h"
 #include <stdlib.h>
-
+#include "main.h"
 /**
- * cnt_wrd - counts the number of words in a string
- * @s: pointer to a character
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
+ *
  * Return: number of words
  */
-int cnt_wrd(char *s)
+int count_word(char *s)
 {
-	int g, i, c = 0;
+	int flag, c, w;
 
-	g = 0;
+	flag = 0;
+	w = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[i] == ' ')
-			g = 0;
-		else if (g == 0)
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			g = 1;
-			c++;
+			flag = 1;
+			w++;
 		}
 	}
-	return (c);
+	return (w);
 }
-
 /**
- * **strtow - splits a string into words and
- * returns them as an array of strings.
- * @str: a pointer to a character array (string)
- * Return: success
+ * **strtow - splits a string into words
+ * @str: string to split
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
  */
-
 char **strtow(char *str)
 {
-	char **diag, *shrt;
-	int l, j = 0, longi = 0, wrds, p = 0, initial, conc;
+	char **matrix, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	while (*(str + longi))
-		longi++;
-	wrds = cnt_wrd(str);
-	if (wrds == 0)
+	while (*(str + len))
+		len++;
+	words = count_word(str);
+	if (words == 0)
 		return (NULL);
-
-	diag = (char **) malloc(sizeof(char *) * (wrds + 1));
-	if (diag == NULL)
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
+	if (matrix == NULL)
 		return (NULL);
-
-	for (l = 0; l <= longi; l++)
+	for (i = 0; i <= len; i++)
 	{
-		if (str[l] == ' ' || str[l] == '\0')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (p)
-			{
-				conc = 1;
-					shrt = (char *) malloc(sizeof(char) * (p + 1));
-				if (shrt == NULL)
-					return (NULL);
-				while (initial < conc)
-					*shrt++ = str[initial++];
-				*shrt = '\0';
-				diag[j] = shrt - p;
-				j++;
-				p = 0;
-			}
+			if (c)
+				end = i;
+			tmp = (char *) malloc(sizeof(char) * (c + 1));
+			if (tmp == NULL)
+				return (NULL);
+			while (start < end)
+				*tmp++ = str[start++];
+			*tmp = '\0';
+			matrix[k] = tmp - c;
+			k++;
+			c = 0;
 		}
-		else if (p++ == 0)
-			initial = l;
 	}
-	diag[j] = NULL;
-	return (diag);
+	if
+		(c++ == 0)
+		start = i;
+
+matrix[k] = NULL;
+return (matrix);
 }
