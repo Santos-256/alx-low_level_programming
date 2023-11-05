@@ -38,6 +38,6 @@ int main(int argc, char *argv[])
 			n -= coins[i];
 		}
 	}
-printf("%d\n", outcome);
-return (0);
+	printf("%d\n", outcome);
+	return (0);
 }
