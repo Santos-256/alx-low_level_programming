@@ -22,7 +22,7 @@ int _atoi(char *s)
 
 	while (s[longi] != '\0')
 		longi++;
-	while (i < len && f == 0)
+	while (i < longi && f == 0)
 	{
 		if (s[i] == '-')
 			++j;
